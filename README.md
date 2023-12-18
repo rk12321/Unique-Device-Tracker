@@ -34,23 +34,9 @@ const url = 'https://rk123456.pythonanywhere.com/store/' + visitorId;
 
 **Reactjs**
 
-import React, { useEffect, useState } from 'react';
-const FingerprintComponent = () => {
   useEffect(() => {
   fpPromise
     .then(fp => fp.get())
     .then(result => {
       const visitorId = result.visitorId;
   }, []);
-
-  return (
-    <div>
-      <h1>Generated Fingerprint:</h1>
-    </div>
-  );
-};
-
-export default FingerprintComponent;
-
-
-
